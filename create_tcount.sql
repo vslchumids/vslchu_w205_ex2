@@ -18,5 +18,3 @@ CREATE TABLE Tweetwordcount
     word text,
     count integer
 );
-
-SELECT * FROM Tweetwordcount ORDER BY count DESC LIMIT 20;
