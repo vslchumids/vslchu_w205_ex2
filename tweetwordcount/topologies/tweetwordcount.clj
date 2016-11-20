@@ -1,0 +1,41 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; W205 Section 5 Exercise 2 Final Submission
+;; Vincent Chu
+;; File name  : tweetwordcount.clj
+;; Description: Clojure file that defines the topology of this stremparse 
+;;              project 
+;; Date       : 11/17/2016
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(ns tweetwordcount
+  (:use     [streamparse.specs])
+  (:gen-class))
+
+(defn tweetwordcount [options]
+   [
+    ;; spout configuration
+    {"tweet-spout" (python-spout-spec
+          options
+          "spouts.tweets.Tweets"
+          ["tweet"]
+          :p 1
+          )
+    }
+    ;; bolt configuration
+    {"parse-tweet-bolt" (python-bolt-spec
+          options
+          {"tweet-spout" :shuffle}
+          "bolts.parse.ParseTweet"
+          ["word"]
+          :p 1
+          )
+     "count-bolt" (python-bolt-spec
+          options
+          {"parse-tweet-bolt" ["word"]}
+          "bolts.wordcount.WordCounter"
+          ["word" "count"]
+          :p 1
+          )
+    }
+  ]
+)
