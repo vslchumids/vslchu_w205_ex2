@@ -15,9 +15,19 @@ $ pip install tweepy
 $ pip install psycopg2
 
 ############################################################################
-# Steps to run my Exercise 2 Streamparse Project
+# Steps to run my Exercise 2 Streamparse Project using git clone
 ############################################################################
 $ cd /home/w205/
 $ git clone https://vslchumids:3952SoftHard\!@github.com/vslchumids/vslchu_w205_ex2.git
+$ cd vslchu_w205_ex2
+$ bash run_ex2.sh
+
+############################################################################
+# Steps to run my Exercise 2 Streamparse Project by downloading zip file
+############################################################################
+$ cd /home/w205/
+$ wget https://github.com/vslchumids/vslchu_w205_ex2/archive/master.zip
+$ unzip master.zip
+$ mv vslchu_w205_ex2-master vslchu_w205_ex2
 $ cd vslchu_w205_ex2
 $ bash run_ex2.sh
