@@ -62,5 +62,7 @@ def main(argv):
         except:
             print("Total number of occurrences of \"", sys.argv[1], "\": 0", sep = "")
 
+    conn.close()
+
 if __name__ == '__main__':
     main(sys.argv)

@@ -124,6 +124,7 @@ def main(argv):
         except:
             print("Note: No words have occurrences >=", l_limit, "and <=", u_limit)
  
+    conn.close()
 
 if __name__ == '__main__':
     main(sys.argv)
