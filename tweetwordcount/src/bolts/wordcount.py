@@ -36,14 +36,12 @@ class WordCounter(Bolt):
         cur.execute("SELECT COUNT(*) FROM Tweetwordcount WHERE word=%s", (word, ))
         word_count = cur.fetchone()[0]
 
-        #self.log("word count = %s", word_count)
-
         if word_count > 0:
             cur.execute("UPDATE Tweetwordcount SET count=count+1 WHERE word=%s", (word, ))
-            self.log('After UPDATE: word count = %d' % (word_count))
+            self.log('After UPDATE: word = %s, count = %d' % (word, word_count))
         else:
             cur.execute("INSERT INTO Tweetwordcount (word,count) VALUES (%s, 1)", (word, ))
-            self.log('After INSERT: word count = %d' %  (word_count))
+            self.log('After INSERT: word = %s, count = %d' %  (word, word_count))
 
         conn.commit()
 
