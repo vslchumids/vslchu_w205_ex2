@@ -6,8 +6,8 @@
 # Date       : 11/19/2016
 ############################################################################
 
-mkdir /home/w205/exercise_2/
-cd /home/w205/exercise_2/
+mkdir /home/w205/exercise_2
+cd /home/w205/exercise_2
 
 sparse quickstart tweetwordcount
 cd tweetwordcount
