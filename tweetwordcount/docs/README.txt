@@ -6,13 +6,17 @@
 # Date       : 11/19/2016
 ############################################################################
 
-Steps to run my Exercise 2:
-
+############################################################################
+# Start-up and Installation
+############################################################################
 $ /data/start_postgres.sh
 $ su - w205 
 $ pip install tweepy
 $ pip install psycopg2
 
+############################################################################
+# Steps to run my Exercise 2 Streamparse Project
+############################################################################
 $ cd /home/w205/
 $ git clone https://vslchumids:3952SoftHard\!@github.com/vslchumids/vslchu_w205_ex2.git
 $ cd vslchu_w205_ex2
