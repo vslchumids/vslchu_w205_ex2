@@ -18,7 +18,7 @@ $ pip install psycopg2
 # Steps to run my Exercise 2 Streamparse Project using git clone
 ############################################################################
 $ cd /home/w205/
-$ git clone https://vslchumids:3952SoftHard\!@github.com/vslchumids/vslchu_w205_ex2.git
+$ git clone https://github.com/vslchumids/vslchu_w205_ex2.git
 $ cd vslchu_w205_ex2
 $ bash run_ex2.sh
 
