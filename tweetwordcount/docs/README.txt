@@ -3,6 +3,7 @@
 # Vincent Chu
 # File name  : README.txt
 # Description: Instructions for running the project
+# Github Link: https://github.com/vslchumids/vslchu_w205_ex2
 # Date       : 11/19/2016
 ############################################################################
 
